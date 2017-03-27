@@ -6,7 +6,7 @@ import io.vertx.redis.RedisClient;
 import io.vertx.redis.RedisOptions;
 
 /**
- * Created by guillaumeunice on 24/03/17.
+ * Created by guillaumeUnice on 24/03/17.
  */
 public class RedisVerticle extends AbstractVerticle {
 
@@ -21,16 +21,15 @@ public class RedisVerticle extends AbstractVerticle {
         // Create the redis client
         final RedisClient client = RedisClient.create(vertx,
                 new RedisOptions().setHost(host));
-
-        client.set("key", "value", r -> {
-            if (r.succeeded()) {
-                System.out.println("key stored");
-                client.get("key", s -> {
-                    System.out.println("Retrieved value: " + s.result());
-                });
-            } else {
-                System.out.println("Connection or Operation Failed " + r.cause());
-            }
-        });
+//        client.set("key", "value", r -> {
+//            if (r.succeeded()) {
+//                System.out.println("key stored");
+//                client.get("key", s -> {
+//                    System.out.println("Retrieved value: " + s.result());
+//                });
+//            } else {
+//                System.out.println("Connection or Operation Failed " + r.cause());
+//            }
+//        });
     }
 }

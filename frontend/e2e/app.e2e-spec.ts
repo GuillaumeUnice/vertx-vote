@@ -1,10 +1,10 @@
-import { FrontendPage } from './app.po';
+import { Frontend2Page } from './app.po';
 
-describe('frontend App', function() {
-  let page: FrontendPage;
+describe('frontend2 App', function() {
+  let page: Frontend2Page;
 
   beforeEach(() => {
-    page = new FrontendPage();
+    page = new Frontend2Page();
   });
 
   it('should display message saying app works', () => {

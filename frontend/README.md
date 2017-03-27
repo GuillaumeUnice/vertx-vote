@@ -36,4 +36,4 @@ To get more help on the `angular-cli` use `ng --help` or go check out the [Angul
 docker build -t vertx-voting-app/vote-front:dev .
 
 ###RUN
-docker run -d --name angular-client -p 4200:4200 vertx-voting-app/vote-front:dev
+docker run --name angular-client -p 4200:4200 vertx-voting-app/vote-front:dev

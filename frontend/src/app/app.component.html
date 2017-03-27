@@ -1,13 +1,18 @@
-<div id="content-container">
-  <div id="content-container-center">
-    <h3>A vs B</h3>
-      <button (ng-click)="choice('a')">A Vote</button>
-      <button (ng-click)="choice('b')">B vote</button>
-    <div id="tip">
-      (Tip: you can change your vote)
-    </div>
-    <div id="hostname">
-      Processed by container ID {{hostname}}
-    </div>
+<section class="container">
+  <div [ngClass]="{'selected': myChoice === choice}" class="item" (click)="choose(choice);" *ngFor="let choice of choices; let i = index">
+    <article>
+      <h1>{{choice}}</h1>
+    </article>
   </div>
+</section>
+<br>
+<br>
+<div id="tip">
+  (Tip: you can change your vote)
+</div>
+
+<div id="hostname" style="font-size: 1.5em;">
+  Processed by container ID
+  <br>
+  {{hostname}}
 </div>
