@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<div id="content-container">
+  <div id="content-container-center">
+    <h3>A vs B</h3>
+      <button (ng-click)="choice('a')">A Vote</button>
+      <button (ng-click)="choice('b')">B vote</button>
+    <div id="tip">
+      (Tip: you can change your vote)
+    </div>
+    <div id="hostname">
+      Processed by container ID {{hostname}}
+    </div>
+  </div>
+</div>
